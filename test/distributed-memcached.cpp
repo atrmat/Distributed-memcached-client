@@ -10,7 +10,7 @@ int main(int argc, char *argv[]) {
 	//connect multi server
 	memc = memcached_create(NULL);
 	servers = memcached_server_list_append(NULL, "192.168.1.28", 12000, &rc);
-	servers = memcached_server_list_append(servers, "192.168.1.28", 12000, &rc);
+	servers = memcached_server_list_append(servers, "192.168.1.28", 12001, &rc);
 	rc = memcached_server_push(memc, servers);
 	memcached_server_free(servers);
 	//Save multi data
